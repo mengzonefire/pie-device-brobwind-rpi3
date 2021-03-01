@@ -47,3 +47,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/3f202000.mmc/by-name/frp \
     ro.sf.lcd_density=240 \
     ro.opengles.version=131072 \
+
+#xzj_add
+PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-impl
+PRODUCT_PACKAGES += android.hardware.camera.provider@2.4-external-service
+
+PRODUCT_COPY_FILES += \
+device/brobwind/rpi3/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+#xzj_add_end
